@@ -1,0 +1,56 @@
+api_tests/
+│
+├── tests/                            # All test cases
+│   ├── __init__.py
+│   ├── test_users.py                 # Test suite for User API
+│   ├── test_auth.py                  # Test suite for Auth API
+│   └── test_orders.py                # Test suite for Order API
+│
+├── data/                             # Test data
+│   ├── users.json
+│   └── orders.json
+│
+├── config/                           # Configuration management
+│   ├── __init__.py
+│   └── settings.py                   # Base URLs, tokens, env handling
+│
+├── utils/                            # Utilities and helpers
+│   ├── __init__.py
+│   ├── logger.py                     # Custom logging setup
+│   └── json_utils.py                 # JSON file reader/writer
+│
+├── clients/                          # API client wrappers using `requests`
+│   ├── __init__.py
+│   ├── base_client.py                # Common HTTP methods
+│   ├── user_client.py                # User API client
+│   └── auth_client.py                # Auth API client
+│
+├── fixtures/                         # Pytest fixtures
+│   ├── __init__.py
+│   └── api_fixtures.py              # Auth tokens, sessions, etc.
+│
+├── reports/                          # Test reports (e.g., pytest-html)
+│   └── index.html
+│
+├── .env                              # Environment variables (base_url, tokens)
+├── pytest.ini                        # Pytest config (markers, addopts)
+├── requirements.txt                  # Dependencies (pytest, requests, etc.)
+└── README.md                         # Documentation
+
+about requirements.txt
+
+requests is the core library for making API calls.
+
+pytest is the test runner.
+
+python-dotenv allows loading .env config into os.environ.
+
+pytest-html generates detailed HTML reports.
+
+pytest-json-report is great for integrations with CI/CD.
+
+pytest-xdist runs tests in parallel for faster execution.
+
+pytest-env auto-loads environment variables from a .env file into tests.
+
+pydantic (optional) can validate and parse API responses or request payloads.

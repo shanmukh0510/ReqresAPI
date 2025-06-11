@@ -1,0 +1,18 @@
+# Core packages
+requests==2.32.0
+pytest==8.2.0
+
+# Environment handling
+python-dotenv==1.0.1
+
+# Reporting
+pytest-html==4.1.1
+pytest-json-report==1.5.0
+
+# Test organization and utilities
+pytest-xdist==3.5.0           # For parallel test execution
+pytest-order==1.2.0           # To order tests
+pytest-env==1.1.3             # To load .env variables automatically
+
+# (Optional) Data handling
+pydantic==2.7.1               # For strong validation of test data
